@@ -10,7 +10,7 @@
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
 AppId={{68ADD8CF-0653-48BD-8B14-26E43B93933C}
 AppName={#MyAppName}
-AppVersion={#MyAppVersion}
+AppVersion={#MyAppVersionString}
 VersionInfoVersion={#MyAppVersion}
 ;We should only allow installing on 64bit systems
 ArchitecturesAllowed=x64
