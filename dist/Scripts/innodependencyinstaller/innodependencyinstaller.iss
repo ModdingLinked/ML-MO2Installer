@@ -304,8 +304,7 @@ begin
 	sql2008express();
 #endif
 
-// Installs all VC versions through InnoDependencyInstaller (ML 1.3)
-// https://github.com/DomGries/InnoDependencyInstaller/blob/master/LICENSE.md
+// Installs all VC versions through InnoDependencyInstaller (Added in ML 1.3)
   Dependency_ForceX86 := True; // force 32-bit install of next dependencies
   Dependency_AddVC2005;
   Dependency_AddVC2008;
