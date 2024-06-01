@@ -1,4 +1,5 @@
 #include "innodependencyinstaller_config.iss"
+#include "CodeDependencies.iss"
 
 [Setup]
 ; downloading and installing dependencies will only work if the memo/ready page is enabled (default and current behaviour)
@@ -302,6 +303,23 @@ begin
 #ifdef use_sql2008express
 	sql2008express();
 #endif
+
+// Installs all VC versions through InnoDependencyInstaller (ML 1.3)
+// https://github.com/DomGries/InnoDependencyInstaller/blob/master/LICENSE.md
+  Dependency_ForceX86 := True; // force 32-bit install of next dependencies
+  Dependency_AddVC2005;
+  Dependency_AddVC2008;
+  Dependency_AddVC2010;
+  Dependency_AddVC2012;
+  Dependency_AddVC2013;
+  Dependency_AddVC2015To2022;
+  Dependency_ForceX86 := False; // disable forced 32-bit install again
+  Dependency_AddVC2005;
+  Dependency_AddVC2008;
+  Dependency_AddVC2010;
+  Dependency_AddVC2012;
+  Dependency_AddVC2013;
+  Dependency_AddVC2015To2022;
 
 	Result := true;
 end;
